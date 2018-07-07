@@ -37,4 +37,6 @@ COPY conf/www.conf /usr/local/php/etc/php-fpm.d/
 COPY conf/php.*.ini /usr/local/php/lib/
 COPY ./docker-entrypoint.sh /usr/local/php/bin/
 
+RUN chmod +x /usr/local/php/bin/docker-entrypoint.sh
+
 ENTRYPOINT ["docker-entrypoint.sh"]
